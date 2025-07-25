@@ -1,0 +1,9 @@
+# --- Virtual Environment ---
+venv/
+.venv/
+env/
+ENV/
+venv-01-unsup-trading/
+
+# --- Jupyter Checkpoints ---
+.ipynb_checkpoints/
