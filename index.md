@@ -1,8 +1,8 @@
-<html>
+
 <head>
   <title>My ML Portfolio</title>
 </head>
-<body>
+
   <h1>Hi, I'm Gyujin Hong!</h1>
   <p>Junior Machine Learning Engineer</p>
   <p>I love developing and learning from machine learning and data science projects that solve real-world problems.
@@ -24,5 +24,4 @@
     <li><a href="hugging_face_genai">HuggingFace: GenAI</a></li>
     <li><a href="hugging_face_agenticai">HuggingFace: Agentic AI</a></li>
   </ul>
-</body>
-</html>
+
