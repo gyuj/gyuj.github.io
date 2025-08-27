@@ -5,9 +5,10 @@
 
   <h1>Hi, I'm Gyujin Hong!</h1>
   <p>Junior Machine Learning Engineer</p>
-  <p>I love developing and learning from machine learning and data science projects that solve real-world problems.
-  <p>I have experience working at a AR/VR Heads-up Display startup in Carlsbad, California as a Machine Learning Engineer for about 3 years, including one year of software engineering internship. I was part of  R&D side for ML implementation and opimization/implementation on the Eye-Tracking&Detection team, and have experience with Detectrons, YOLO, and HuggingFace. Most of my experience included managing trainig database for our eyetracking modules, building, training, and fine-tuning AI models, conducting experiments to test performance of models, and managing and visualizing the experiement data to organize results and comprehend performance levels. 
-  I was one of two AI/ML Engineer reps for SW/HW meetings with international investor/partners from France, Germany, Japan, and Detroit, and attended CES 2025 through this experience, gaining precious exposure within the industry and deeper passion for the future of AI and data engineering.
+  <p>I love developing and learning with machine learning and data science projects that solve real-world problems.
+  <p>I have experience working at a AR/VR Heads-up Display startup in Carlsbad, California as a Machine Learning Engineer for about 3 years, including one year of software engineering internship. 
+    I was part of  R&D side for ML implementation and optimization/implementation on the Eye-Tracking & Detection team, and have experience with Detectrons, YOLO, and HuggingFace. Most of my experience included managing / training database for our eyetrack modules, building, training, and fine-tuning AI models, conducting experiments to test performance of models, and analyzing and visualizing the experiment data to organize results and compare performance levels. 
+  I was one of two AI/ML Engineer reps for SW/HW meetings with international investor/partners from France, Germany, Japan, and Detroit, and attended CES 2025, gaining precious exposure within the industry and deeper passion for the future of AI and data engineering.
   
 
   <h2>Projects</h2>
