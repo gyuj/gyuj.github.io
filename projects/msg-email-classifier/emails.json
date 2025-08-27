@@ -1,0 +1,18 @@
+[
+    {
+        "subject": "Invoice for recent purchse with Sephora",
+        "body": "Here is the receipt!"
+    }, 
+    {
+        "subject": "Your Amazon.com order of 'The Great Gatsby' has shipped",
+        "body": "Your order is on its way!"
+    },
+    {
+        "subject": "Schedule for next week's team meeting",
+        "body": "Please find the agenda attached."
+    },
+    {
+        "subject": "Trouble log into account",
+        "body": "Hello, I need help with my logging into my account, support in tech needed!."
+    }
+]

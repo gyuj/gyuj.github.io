@@ -1,0 +1,18 @@
+[
+    {
+        "subject": "message, testing, what will this do?",
+        "body": "maybe something random, can we schedule an appointment for next wendesday?"
+    }, 
+    {
+        "subject": "My order, I'm waiting for the status of my order",
+        "body": "Estimated delivery for my Amazon order? Where is my order currently?"
+    },
+    {
+        "subject": "This might be a spam message, but Amazon order deliver",
+        "body": "Recent purchase from Amazon on Fraud Detection and Spam"
+    },
+    {
+        "subject": "My name is Gyujin, I am a Machine Learning Engineer",
+        "body": "I would love to work with ML for data engineering"
+    }
+]
