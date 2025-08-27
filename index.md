@@ -4,7 +4,7 @@
 </head>
 
   <h1>Hi, I'm Gyujin Hong!</h1>
-  <p>Github Link: <li><a href="github.com/gyuj">gyuj</a></li></p>
+  <p>Github Link: <li><a href="https://www.github.com/gyuj">gyuj</a></li></p>
   <p>Junior Machine Learning Engineer</p>
   <p>I love developing and learning with machine learning and data science projects that solve real-world problems.
   <p>I have experience working at a AR/VR Heads-up Display startup in Carlsbad, California as a Machine Learning Engineer for about 3 years, including one year of software engineering internship. 
