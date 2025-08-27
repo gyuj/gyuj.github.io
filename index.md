@@ -13,7 +13,7 @@
   I was one of two AI/ML Engineer reps for SW/HW meetings with international investor/partners from France, Germany, Japan, and Detroit, and attended CES 2025, gaining precious exposure within the industry and deeper passion for the future of AI and data engineering.</p>
   
 
-  <h2>Projects</h2>
+  <h2>Professional / Personal Projects</h2>
   <ul>
     <li><a href="https://www.notion.so/Sunglasses-Detection-Layer-1f3bcd635967804d83fcc54572e9a221">Project 1: Sunglasses Classifier Notion Link (Completed)</a></li>
     <li><a href="https://github.com/gyuj/gyuj.github.io/tree/2b356c4b5a867d71dbf83d73f9ce86bf65c5cf70/projects/msg-email-classifier">Project 2: Email / Msg Classifier - HuggingFace API (Completed)</a></li>
