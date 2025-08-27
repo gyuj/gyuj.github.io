@@ -4,6 +4,7 @@
 </head>
 
   <h1>Hi, I'm Gyujin Hong!</h1>
+  <p>Github Link: <li><a href="github.com/gyuj">gyuj</a></li></p>
   <p>Junior Machine Learning Engineer</p>
   <p>I love developing and learning with machine learning and data science projects that solve real-world problems.
   <p>I have experience working at a AR/VR Heads-up Display startup in Carlsbad, California as a Machine Learning Engineer for about 3 years, including one year of software engineering internship. 
@@ -14,13 +15,15 @@
   <h2>Projects</h2>
   <ul>
     <li><a href="https://www.notion.so/Sunglasses-Detection-Layer-1f3bcd635967804d83fcc54572e9a221">Project 1: Sunglasses Classifier Notion Link (Completed)</a></li>
-    <li><a href="https://github.com/gyuj/gyuj.github.io/tree/c2d0cc78d72f5d974cf56c5843a4158200740a41/projects/algo-trading">Project 2: Algo Trading - Unsupervised (In progress)</a></li>
-    <li><a href="https://github.com/gyuj/project-2">Project 3: Sentiment Classifier - Supervised (In planning)</a></li>
+    <li><a href="https://github.com/gyuj/gyuj.github.io/tree/2b356c4b5a867d71dbf83d73f9ce86bf65c5cf70/projects/msg-email-classifier">Project 2: Email / Msg Classifier - HuggingFace API (Completed)</a></li>
+    <li><a href="https://github.com/gyuj/gyuj.github.io/tree/c2d0cc78d72f5d974cf56c5843a4158200740a41/projects/algo-trading">Project 3: Algo Trading - Unsupervised (In progress)</a></li>
+    <li><a href="https://github.com/gyuj/gyuj.github.io/tree/2b356c4b5a867d71dbf83d73f9ce86bf65c5cf70/projects/rag_projects">Project 4: Chatbot / Recommender - RAG (In progress)</a></li>
+    <li><a href="https://github.com/gyuj/project-2">Project 5: Sentiment Classifier - Supervised (In planning)</a></li>
   </ul>
   <h2>Certifications - In Progress</h2>
   <ul>
     <li><a href="link_to_cert_coursera_dl">Coursera: Deep Learning</a></li>
-    <li><a href="link_to_cert_coursera_gcp">Coursera: Google Fundamentals</a></li>
+    <li><a href="link_to_cert_coursera_gcp">Coursera: Google Cloud Fundamentals</a></li>
     <li><a href="link_to_cert_codesignal_python">Codesignal: Python Essentials</a></li>
     <li><a href="hugging_face_genai">HuggingFace: GenAI</a></li>
     <li><a href="hugging_face_agenticai">HuggingFace: Agentic AI</a></li>
