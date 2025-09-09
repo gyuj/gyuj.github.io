@@ -19,9 +19,9 @@
     <li><a href="https://github.com/gyuj/gyuj.github.io/tree/2b356c4b5a867d71dbf83d73f9ce86bf65c5cf70/projects/msg-email-classifier">Project 2: Email / Msg Classifier - HuggingFace API (Completed)</a></li>
     <li><a href="https://github.com/gyuj/gyuj.github.io/tree/c2d0cc78d72f5d974cf56c5843a4158200740a41/projects/algo-trading">Project 3: Algo Trading - Unsupervised (In progress)</a></li>
     <li><a href="https://github.com/gyuj/gyuj.github.io/tree/2b356c4b5a867d71dbf83d73f9ce86bf65c5cf70/projects/rag_projects">Project 4: Chatbot / Recommender - RAG (In progress)</a></li>
-    <li><a href="https://github.com/gyuj/project-2">Project 5: Sentiment Classifier - Supervised (In planning)</a></li>
+    <li><a href="https://github.com/gyuj/gyuj.github.io/tree/8305053c797d7b1fb1e1e312d4be16d346ff143b/projects/sentiment-analysis">Project 5: Sentiment Classifier - HuggingFace/TwitterAPI (In progress, fixing bugs)</a></li>
   </ul>
-  <h2>Certifications - In Progress</h2>
+  <h2>Certifications - In Progress (Links not updated)</h2>
   <ul>
     <li><a href="link_to_cert_coursera_dl">Coursera: Deep Learning</a></li>
     <li><a href="link_to_cert_coursera_gcp">Coursera: Google Cloud Fundamentals</a></li>
