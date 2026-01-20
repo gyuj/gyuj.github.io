@@ -25,6 +25,7 @@
   <ul>
     <li><a href="assets/databricks-course-fundamentals.pdf">Databricks: Fundamentals</a></li>
     <li><a href="assets/databricks-course-sql-bi-analysis.pdf">Databricks: SQL Analytics and BI</a></li>
+    <li><a href="assets/greatlearning-course-android-studio-kotlin.pdf">Great Learning Academy: Android Studio & Kotlin Programming</a></li>
   </ul>
   <h2>Certifications - In Progress (Links not updated)</h2>
   <ul>
