@@ -21,7 +21,7 @@
     <li><a href="https://github.com/gyuj/gyuj.github.io/tree/2b356c4b5a867d71dbf83d73f9ce86bf65c5cf70/projects/rag_projects">Project 4: Chatbot / Recommender - RAG (In progress)</a></li>
     <li><a href="https://github.com/gyuj/gyuj.github.io/tree/8305053c797d7b1fb1e1e312d4be16d346ff143b/projects/sentiment-analysis">Project 5: Sentiment Classifier - HuggingFace/TwitterAPI (In progress, fixing bugs)</a></li>
   </ul>
-  <h2>Certifications - Completed (click for link)</h2>
+  <h2 id="certifications">Certifications - Completed (click for link)</h2>
   <ul>
     <li><a href="assets/databricks-course-fundamentals.pdf">Databricks: Fundamentals</a></li>
     <li><a href="assets/databricks-course-sql-bi-analysis.pdf">Databricks: SQL Analytics and BI</a></li>
