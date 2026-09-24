@@ -1,0 +1,53 @@
+# Satellite Vision Intelligence Platform - Python Dependencies
+# ============================================================
+
+# --- Web Framework ---
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# --- Streamlit Frontend ---
+streamlit>=1.28.0
+
+# --- Deep Learning ---
+torch>=2.1.0
+torchvision>=0.16.0
+
+# --- Transformers & Embeddings ---
+transformers>=4.35.0
+sentence-transformers>=2.2.2
+
+# --- Vector Database ---
+qdrant-client>=1.7.0
+
+# --- AWS / S3 ---
+aioboto3>=12.0.0
+boto3>=1.29.0
+
+# --- Geospatial & Image Processing ---
+rasterio>=1.3.9
+numpy>=1.26.0
+Pillow>=10.1.0
+
+# --- LLM / Claude ---
+anthropic>=0.40.0
+
+# --- Model Context Protocol ---
+mcp>=1.0.0
+
+# --- HTTP Client ---
+httpx>=0.25.0
+
+# --- Data Validation & Settings ---
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# --- Environment Variables ---
+python-dotenv>=1.0.0
+
+# --- PDF Report Generation ---
+fpdf2>=2.7.6
+
+# --- Testing ---
+pytest>=7.4.0
+pytest-asyncio>=0.23.0

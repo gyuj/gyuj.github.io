@@ -1,0 +1,131 @@
+# ==============================================================================
+# Satellite Vision Intelligence Platform — Docker Compose
+# Full local development stack
+# ==============================================================================
+
+version: "3.9"
+
+services:
+  # --------------------------------------------------------------------------
+  # FastAPI backend
+  # --------------------------------------------------------------------------
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: satellite-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+      - S3_ENDPOINT_URL=http://localstack:4566
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+    volumes:
+      - ./app:/app/app          # hot-reload source code
+      - model-cache:/app/models  # persist downloaded model weights
+    depends_on:
+      qdrant:
+        condition: service_healthy
+      localstack:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 3
+    networks:
+      - satellite-net
+    restart: unless-stopped
+
+  # --------------------------------------------------------------------------
+  # Streamlit frontend
+  # --------------------------------------------------------------------------
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: satellite-streamlit
+    command: ["streamlit", "run", "app/frontend/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    environment:
+      - API_BASE_URL=http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - satellite-net
+    restart: unless-stopped
+
+  # --------------------------------------------------------------------------
+  # Qdrant vector database
+  # --------------------------------------------------------------------------
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: satellite-qdrant
+    ports:
+      - "6333:6333"   # REST API
+      - "6334:6334"   # gRPC
+    volumes:
+      - qdrant-data:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__GRPC_PORT=6334
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"]
+      interval: 15s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    networks:
+      - satellite-net
+    restart: unless-stopped
+
+  # --------------------------------------------------------------------------
+  # LocalStack — local AWS S3 emulation
+  # --------------------------------------------------------------------------
+  localstack:
+    image: localstack/localstack:latest
+    container_name: satellite-localstack
+    ports:
+      - "4566:4566"   # edge port — all AWS services
+    environment:
+      - SERVICES=s3
+      - DEFAULT_REGION=us-east-1
+      - DATA_DIR=/var/lib/localstack/data
+    volumes:
+      - localstack-data:/var/lib/localstack
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4566/_localstack/health"]
+      interval: 15s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    networks:
+      - satellite-net
+    restart: unless-stopped
+
+# --------------------------------------------------------------------------
+# Volumes
+# --------------------------------------------------------------------------
+volumes:
+  qdrant-data:
+    driver: local
+  localstack-data:
+    driver: local
+  model-cache:
+    driver: local
+
+# --------------------------------------------------------------------------
+# Networks
+# --------------------------------------------------------------------------
+networks:
+  satellite-net:
+    driver: bridge

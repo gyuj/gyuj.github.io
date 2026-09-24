@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluetooth Display Editor</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+    h1 { margin-bottom: 16px; font-size: 1.4rem; color: #a0c4ff; }
+    .toolbar { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; justify-content: center; }
+    .toolbar button, .toolbar label, .toolbar select, .toolbar input[type="text"] {
+      padding: 8px 14px; border: 1px solid #333; border-radius: 6px; background: #16213e;
+      color: #e0e0e0; cursor: pointer; font-size: 0.85rem; transition: background 0.2s;
+    }
+    .toolbar button:hover, .toolbar label:hover { background: #0f3460; }
+    .toolbar button.active { background: #0f3460; border-color: #a0c4ff; }
+    .toolbar input[type="file"] { display: none; }
+    .toolbar input[type="text"] { width: 160px; }
+    .toolbar input[type="color"] { width: 36px; height: 36px; border: 1px solid #333; border-radius: 6px; background: #16213e; cursor: pointer; padding: 2px; }
+    .canvas-wrapper { border: 2px solid #333; border-radius: 8px; overflow: hidden; background: #fff; position: relative; }
+    canvas { display: block; cursor: crosshair; }
+    .info { margin-top: 12px; font-size: 0.8rem; color: #888; text-align: center; }
+    .settings { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; flex-wrap: wrap; justify-content: center; }
+    .settings label { font-size: 0.8rem; color: #aaa; }
+    .settings input, .settings select { padding: 4px 8px; border: 1px solid #333; border-radius: 4px; background: #16213e; color: #e0e0e0; font-size: 0.8rem; }
+    #status { margin-top: 12px; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; display: none; }
+    #status.success { display: block; background: #0a3d0a; color: #4caf50; }
+    #status.error { display: block; background: #3d0a0a; color: #f44336; }
+  </style>
+</head>
+<body>
+  <h1>Bluetooth Display Editor</h1>
+
+  <div class="settings">
+    <label>Display W:</label>
+    <input type="number" id="displayWidth" value="1280" min="1" max="2048" style="width:60px">
+    <label>H:</label>
+    <input type="number" id="displayHeight" value="800" min="1" max="2048" style="width:60px">
+    <button id="btnApplySize">Apply Size</button>
+    <label>Scale:</label>
+    <select id="scaleSelect">
+      <option value="0.5">0.5x</option>
+      <option value="0.75">0.75x</option>
+      <option value="1" selected>1x</option>
+    </select>
+  </div>
+
+  <div class="toolbar">
+    <label class="upload-btn">
+      Upload Image
+      <input type="file" id="imageInput" accept="image/*">
+    </label>
+    <button id="btnDraw" class="active">Draw</button>
+    <button id="btnText">Text</button>
+    <button id="btnErase">Eraser</button>
+    <input type="color" id="colorPicker" value="#000000" title="Color">
+    <select id="brushSize">
+      <option value="1">1px</option>
+      <option value="2" selected>2px</option>
+      <option value="4">4px</option>
+      <option value="8">8px</option>
+    </select>
+    <input type="text" id="textInput" placeholder="Type text here...">
+    <select id="fontSize">
+      <option value="12">12px</option>
+      <option value="16" selected>16px</option>
+      <option value="20">20px</option>
+      <option value="28">28px</option>
+      <option value="36">36px</option>
+    </select>
+    <button id="btnUndo">Undo</button>
+    <button id="btnClear">Clear</button>
+    <button id="btnSend">Send to Display</button>
+    <button id="btnDownload">Download</button>
+  </div>
+
+  <div class="canvas-wrapper">
+    <canvas id="canvas"></canvas>
+  </div>
+  <div id="status"></div>
+  <div class="info">Canvas matches display resolution. What you see is what gets sent.</div>
+
+  <script src="editor.js"></script>
+</body>
+</html>
